@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary, $color-primary-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 320px;
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
