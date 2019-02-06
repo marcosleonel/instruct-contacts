@@ -1,12 +1,14 @@
 <template>
-  <section class="contact-card">
+  <section :class="toggleCard ? 'contact-card--collapsed' : 'contact-card'">
 
     <div class="row">
-      <div class="contact-card__initial">
-        <span class="contact-card__initial__char">
-          {{ contactName | returnInitial }}
-        </span>
-      </div>
+      <a @click="toggleCard = !toggleCard">
+        <div class="contact-card__initial">
+          <span class="contact-card__initial__char">
+            {{ contactName | returnInitial }}
+          </span>
+        </div>
+      </a>
 
       <div class="contact-card__names">
         <h4 class="contact-card__names__civil-name">

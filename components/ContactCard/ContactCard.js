@@ -2,6 +2,7 @@ const ContactCard = {
   name: 'ContactCard',
 
   props: {
+    toggleCard: false,
     id: Number,
     contactName: String,
     contactUsername: String,
