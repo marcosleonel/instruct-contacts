@@ -15,6 +15,7 @@
     background-color: $white;
     box-shadow: $card-shadow;
     transition: height 600ms ease-out;
+
   }
 
   &__initial {
@@ -29,6 +30,7 @@
     border-radius: 50px;
     background-color: $color-primary-dark;
     text-align: center;
+    cursor: pointer;
 
     &__char {
       font-family: $font-primary;
@@ -42,6 +44,7 @@
     padding: 1rem;
     text-align: left;
     color: $gray;
+    cursor: pointer;
 
     &__civil-name {
       margin-top: 0.5rem;
@@ -73,6 +76,40 @@
     &__email {
       font-size: 1rem;
       line-height: 1.5rem;
+    }
+  }
+
+  &__secondary-info {
+    float: right;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    text-align: right;
+    color: $gray;
+
+    &__icon {
+      margin-right: 0.4rem;
+    }
+
+    &__city,
+    &__address,
+    &__zipcode {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__map {
+    height: auto;
+    margin: 1rem;
+    transition: height 800ms ease-out;
+
+    &--hidden {
+      height: 0px;
+      transition: height 800ms ease-out;
+    }
+
+    &__iframe {
+      float: left;
     }
   }
 }
