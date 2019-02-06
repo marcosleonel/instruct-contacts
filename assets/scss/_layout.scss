@@ -12,7 +12,7 @@ html {
 .app {
   min-width: 100vw;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary, $color-primary-dark);
+  background-image: linear-gradient($color-primary, $color-primary-light);
   margin: 0;
   padding: 0;
 }
@@ -38,6 +38,17 @@ html {
 
   @media (min-width: 1200px) {
     max-width: 1140px;
+  }
+}
+
+.row {
+  width: 100%;
+  height: auto;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 
