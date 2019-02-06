@@ -14,7 +14,9 @@ html {
   min-height: 100vh;
   background-image: linear-gradient($color-primary, $color-primary-light);
   margin: 0;
+  margin-bottom: -25px;
   padding: 0;
+  padding-bottom: 4rem;
 }
 
 .container {

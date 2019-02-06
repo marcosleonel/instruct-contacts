@@ -15,7 +15,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ]
+    ],
   },
 
   /*
@@ -34,6 +34,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/font-awesome',
   ],
 
   /*

@@ -18,12 +18,18 @@
       </div>
 
       <div class="contact-card__primary-info">
-        <span class="contact-card__primary-info__phone">
+        <p class="contact-card__primary-info__phone">
+          <font-awesome-icon
+            icon="phone"
+            class="contact-card__primary-info__icon" />
           {{ contactPhone }}
-        </span>
-        <span class="contact-card__primary-info__email">
+        </p>
+        <p class="contact-card__primary-info__email">
+          <font-awesome-icon
+            icon="envelope"
+            class="contact-card__primary-info__icon" />
           {{ contactEmail }}
-        </span>
+        </p>
       </div>
     </div>
 

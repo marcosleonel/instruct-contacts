@@ -19,9 +19,9 @@ const ContactCard = {
     companyBs: String,
   },
 
-  filter: {
+  filters: {
     returnInitial(name) {
-      return name.substring(0, 1);
+      return name.slice(0, 1);
     },
   },
 };

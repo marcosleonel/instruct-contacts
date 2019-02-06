@@ -1,14 +1,19 @@
 .contact-card {
   width: 100%;
   height: 6rem;
+  margin-bottom: 1rem;
   border-radius: 10px;
   background-color: $white;
   box-shadow: $card-shadow;
 
   &__initial {
     float: left;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
     padding: 1rem;
     border-radius: 50px;
     background-color: $color-primary-dark;
@@ -16,7 +21,7 @@
 
     &__char {
       font-family: $font-primary;
-      font-size: 4.5rem;
+      font-size: 3rem;
       color: $color-info;
     }
   }
@@ -28,7 +33,8 @@
     color: $gray;
 
     &__civil-name {
-      font-size: 2rem;
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
       font-weight: bolder;
     }
 
@@ -39,16 +45,23 @@
 
   &__primary-info {
     float: right;
+    margin-top: 0.5rem;
     padding: 1rem;
     text-align: right;
     color: $gray;
 
+    &__icon {
+      margin-right: 0.4rem;
+    }
+
     &__phone {
       font-size: 1rem;
+      line-height: 1.5rem;
     }
 
     &__email {
       font-size: 1rem;
+      line-height: 1.5rem;
     }
   }
 }
