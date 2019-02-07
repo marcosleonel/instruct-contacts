@@ -18,7 +18,7 @@
           :contact-city="contact.address.city"
           :contact-zipcode="contact.address.zipcode"
           :contact-geo-lat="contact.address.geo.lat"
-          :contact-get-lng="contact.address.geo.lng"
+          :contact-geo-lng="contact.address.geo.lng"
           :contact-phone="contact.phone"
           :contact-website="contact.website"
           :company-name="contact.company.name"

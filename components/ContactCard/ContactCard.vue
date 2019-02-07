@@ -40,21 +40,63 @@
 
     <!-- INFORMAÇÕES SECUNDÁRIAS -->
     <div :class="toggleCard ? 'row' : 'row--hidden'">
+      <!-- MAPA -->
       <div :class="toggleCard ? 'contact-card__map' : 'contact-card__map--hidden'">
         <iframe
           width="320"
           height="160"
           frameborder="0"
-          :src="`https://www.bing.com/maps/embed?h=160&w=320&cp=${contactGeoLat}~${contactGeoLat}&lvl=14&typ=s&sty=h&src=SHELL&FORM=MBEDV8`"
+          :src="`https://www.bing.com/maps/embed?h=160&w=320&cp=${contactGeoLat}~${contactGeoLng}&lvl=14&typ=s&sty=h&src=SHELL&FORM=MBEDV8`"
           scrolling="no" />
       </div>
 
       <div class="contact-card__secondary-info">
-        <p class="contact-card__secondary-info__address">
+        <p class="contact-card__secondary-info__block">
+          <font-awesome-icon
+            icon="laptop"
+            class="contact-card__secondary-info__icon" />
+          {{ contactWebsite }}
+        </p>
+
+        <p class="contact-card__secondary-info__block">
           <font-awesome-icon
             icon="home"
             class="contact-card__secondary-info__icon" />
           {{ contactStreet }}, {{ contactSuite }}
+        </p>
+
+        <p class="contact-card__secondary-info__block">
+          <font-awesome-icon
+            icon="map-marker"
+            class="contact-card__secondary-info__icon" />
+          {{ contactCity }}
+        </p>
+
+        <p class="contact-card__secondary-info__block">
+          <font-awesome-icon
+            icon="map-pin"
+            class="contact-card__secondary-info__icon" />
+          {{ contactZipcode }}
+        </p>
+
+        <p class="contact-card__secondary-info__block">
+          <font-awesome-icon
+            icon="globe"
+            class="contact-card__secondary-info__icon" />
+          {{ contactGeoLat }}, {{ contactGeoLng }}
+        </p>
+
+        <p class="contact-card__secondary-info__block">
+          <font-awesome-icon
+            icon="building"
+            class="contact-card__secondary-info__icon" />
+          {{ companyName }}
+          <small>
+            {{ companyCatchPhrase }}
+          </small>
+          <small class="bs">
+            {{ companyBs }}
+          </small>
         </p>
       </div>
     </div>

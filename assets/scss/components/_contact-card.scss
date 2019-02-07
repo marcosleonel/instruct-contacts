@@ -3,6 +3,7 @@
   height: 6rem;
   margin-bottom: 1rem;
   border-radius: 10px;
+  border-left: 0.5rem solid $color-warning;
   background-color: $white;
   box-shadow: $card-shadow;
   transition: height 600ms ease-out;
@@ -12,6 +13,7 @@
     height: 18rem;
     margin-bottom: 1rem;
     border-radius: 10px;
+    border-left: 0.5rem solid $color-warning;
     background-color: $white;
     box-shadow: $card-shadow;
     transition: height 600ms ease-out;
@@ -28,14 +30,14 @@
     margin-left: 1rem;
     padding: 1rem;
     border-radius: 50px;
-    background-color: $color-primary-dark;
+    background-color: $color-info;
     text-align: center;
     cursor: pointer;
 
     &__char {
       font-family: $font-primary;
       font-size: 3rem;
-      color: $color-info;
+      color: $color-primary-dark;
     }
   }
 
@@ -66,6 +68,7 @@
 
     &__icon {
       margin-right: 0.4rem;
+      color: $color-primary-dark;
     }
 
     &__phone {
@@ -81,35 +84,52 @@
 
   &__secondary-info {
     float: right;
-    margin-top: 0.5rem;
-    padding: 1rem;
+    padding-right: 1rem;
     text-align: right;
     color: $gray;
+    transform: translateY(-1.4rem);
 
     &__icon {
       margin-right: 0.4rem;
+      color: $color-primary-dark;
     }
 
-    &__city,
-    &__address,
-    &__zipcode {
+    &__block {
       font-size: 1rem;
       line-height: 1.5rem;
+
+      small {
+        display: block;
+        font-style: italic;
+      }
+
+      .bs {
+        color: $color-primary-light;
+        font-size: 0.8rem;
+      }
     }
   }
 
   &__map {
-    height: auto;
+    display: inline;
+    max-width: 50%;
     margin: 1rem;
     transition: height 800ms ease-out;
+
+    &__iframe {
+      float: left;
+      height: 160px;
+      transition: height 800ms ease-out;
+    }
 
     &--hidden {
       height: 0px;
       transition: height 800ms ease-out;
-    }
 
-    &__iframe {
-      float: left;
+      &__iframe {
+        height: 0px;
+        transition: height 800ms ease-out;
+      }
     }
   }
 }

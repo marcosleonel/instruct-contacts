@@ -12,7 +12,7 @@ const ContactCard = {
     contactCity: String,
     contactZipcode: String,
     contactGeoLat: String,
-    contactGetLng: String,
+    contactGeoLng: String,
     contactPhone: String,
     contactWebsite: String,
     companyName: String,
