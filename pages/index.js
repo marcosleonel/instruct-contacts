@@ -1,3 +1,4 @@
+import axios from 'axios';
 import Header from '../components/Header/Header.vue';
 import ContactCard from '../components/ContactCard/ContactCard.vue';
 
@@ -12,40 +13,38 @@ const App = {
   },
 
   data: () => ({
-    contactList: API_MOCK,
-    filteredList: API_MOCK,
+    mock: API_MOCK,
     filter: '',
   }),
 
-  watch: {
-    filter(val) {
-      this.filterList(this.contactList, val);
-    },
+  async asyncData() {
+    const { data } = await axios.get('http://jsonplaceholder.typicode.com/users');
+    return { contactList: data };
   },
 
   methods: {
-    filterList(list, filter) {
-      const filteredContacts = [];
-
-      for (let i = 0; i < list.length; i + 1) {
-        const contact = list[i];
-        const domain = contact.email.split('@').pop();
-
-        if (domain.indexOf(filter) !== -1) filteredContacts.push(contact);
-      }
-
-      this.filteredList = filteredContacts;
+    matchCondintion(email, filter) {
+      if (filter === '' || filter === undefined || filter === null) return true;
+      const domain = email.split('@').pop();
+      const afterDot = domain.split('.').pop();
+      const isItOK = afterDot.indexOf(filter) !== -1; // eslint-disable-line
+      return isItOK;
     },
 
     getFilterOptions(list) {
       const options = [];
+      let isDuplicated = false;
 
       for (let i = 0; i < list.length; i++) { // eslint-disable-line
         const contact = list[i];
         const domain = contact.email.split('@').pop();
         const option = domain.split('.').pop();
 
-        options.push(option);
+        options.forEach((item) => { // eslint-disable-line
+          if (item === option) isDuplicated = true;
+        });
+
+        if (!isDuplicated) options.push(option);
       }
 
       return options;
