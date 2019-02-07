@@ -2,6 +2,7 @@ const ContactCard = {
   name: 'ContactCard',
 
   props: {
+    toggleCard: false,
     id: Number,
     contactName: String,
     contactUsername: String,
@@ -11,7 +12,7 @@ const ContactCard = {
     contactCity: String,
     contactZipcode: String,
     contactGeoLat: String,
-    contactGetLng: String,
+    contactGeoLng: String,
     contactPhone: String,
     contactWebsite: String,
     companyName: String,

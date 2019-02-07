@@ -6,7 +6,10 @@ import {
   faHome,
   faUser,
   faBuilding,
-  faDollarSign,
+  faMapPin,
+  faLaptop,
+  faGlobe,
+  faMapMarker,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -16,7 +19,10 @@ library.add(
   faHome,
   faUser,
   faBuilding,
-  faDollarSign,
+  faMapPin,
+  faLaptop,
+  faGlobe,
+  faMapMarker,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
