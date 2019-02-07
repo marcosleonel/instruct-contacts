@@ -6,5 +6,9 @@ form {
   select {
     font-size: 1rem;
     width: 12rem;
+
+    @media only screen and (max-width: 578px) {
+      margin-top: 1rem;
+    }
   }
 }

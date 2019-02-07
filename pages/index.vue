@@ -8,18 +8,18 @@
     <main class="container">
 
       <form>
-        Filtrar por e-mail:
+        Filtrar por final do e-mail:
         <select
           v-model="filter"
           name="emails">
           <option value="">
-            Selecione...
+            Todos
           </option>
           <option
             v-for="(option, index) in getFilterOptions(contactList)"
             :key="index"
             :value="option">
-            {{ option }}
+            .{{ option }}
           </option>
         </select>
       </form>
