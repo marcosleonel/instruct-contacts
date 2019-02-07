@@ -1,12 +1,31 @@
 <template>
   <div class="app">
-    <div class="container">
-      <Header
-        title="Contact List"
-        subtitle="Explore a lista e utilize os filtros para selecionar contatos específicos." />
+    <Header
+      title="Lista de Contatos"
+      subtitle="Explore e utilize o filtro para selecionar contatos." />
 
-      <main
-        v-for="contact in contactList"
+
+    <main class="container">
+
+      <form>
+        Filtrar por e-mail:
+        <select
+          v-model="filter"
+          name="emails">
+          <option value="">
+            Selecione...
+          </option>
+          <option
+            v-for="(option, index) in getFilterOptions(contactList)"
+            :key="index"
+            :value="option">
+            {{ option }}
+          </option>
+        </select>
+      </form>
+
+      <div
+        v-for="contact in filteredList"
         :key="contact.id">
         <ContactCard
           :id="contact.id"
@@ -24,9 +43,9 @@
           :company-name="contact.company.name"
           :company-catch-phrase="contact.company.catchPhrase"
           :company-bs="contact.company.bs" />
-      </main>
+      </div>
+    </main>
 
-    </div>
   </div>
 </template>
 
