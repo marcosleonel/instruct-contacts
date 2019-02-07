@@ -1,22 +1,21 @@
-# i-contact-list
+![Logo of the project](./instruct-logo.png)
+# Lista de Contatos
+[![node version](https://img.shields.io/badge/node%20version-v10.15.0-brightgreen.svg)](https://nodejs.org/docs/latest-v9.x/api/)
 
-> Organizador de contatos
+> Organizador de contatos.
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# Instalar dependências
 $ yarn install
 
-# serve with hot reload at localhost:3000
+# Inciar servidor de desenvolvimento com hot reload em localhost:3000
 $ yarn run dev
 
-# build for production and launch server
+# Build para produção e iniciar servidor
 $ yarn run build
 $ yarn start
-
-# generate static project
-$ yarn run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Veja a documentação completa do framework: [Nuxt.js docs](https://nuxtjs.org).
