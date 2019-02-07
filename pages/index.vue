@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <Header
-      title="Contact List"
+      title="Lista de Contatos"
       subtitle="Explore e utilize o filtro para selecionar contatos." />
 
 
