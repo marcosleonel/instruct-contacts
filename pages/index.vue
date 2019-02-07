@@ -25,9 +25,10 @@
       </form>
 
       <div
-        v-for="contact in filteredList"
+        v-for="contact in contactList"
         :key="contact.id">
         <ContactCard
+          v-if="matchCondintion(contact.email, filter)"
           :id="contact.id"
           :contact-name="contact.name"
           :contact-username="contact.username"
