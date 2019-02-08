@@ -16,20 +16,37 @@ const App = {
     filter: '',
   }),
 
+  /**
+  * Faz a requisição da lista de contatos à API.
+  * @return {array} retorna uma array com a lista de contatos retornada pelo endpoint.
+  */
   async asyncData() {
     const { data } = await axios.get('http://jsonplaceholder.typicode.com/users');
     return { contactList: data };
   },
 
   methods: {
+    /**
+    * Checa se o e-mail enviado possui o final do host escolhido no filtro.
+    * @param {number} email - endereço de e-mail do contato
+    * @param {string} filter - final do host selecionado
+    * @return {boolean} retorna 'true' se combinar e 'false' caso contrário.
+    */
     matchCondintion(email, filter) {
       if (filter === '' || filter === undefined || filter === null) return true;
+
       const domain = email.split('@').pop();
       const afterDot = domain.split('.').pop();
       const isItOK = afterDot.indexOf(filter) !== -1; // eslint-disable-line
+
       return isItOK;
     },
 
+    /**
+    * Seleciona os finais de hosts de e-mail de uma lista de contatos.
+    * @param {array} list - lista de contados com o campo 'email'
+    * @return {array} retorna uma array com os finais de hosts únicos.
+    */
     getFilterOptions(list) {
       const options = [];
       let isDuplicated = false;
@@ -45,7 +62,6 @@ const App = {
 
         if (!isDuplicated) options.push(option);
       }
-
       return options;
     },
   },

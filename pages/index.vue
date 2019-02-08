@@ -1,12 +1,13 @@
 <template>
   <div class="app">
+    <!-- CABEÇALHO -->
     <Header
       title="Lista de Contatos"
       subtitle="Explore e utilize o filtro para selecionar contatos." />
 
-
     <main class="container">
 
+      <!-- FILTRO DE RESULTADOS DA LISTA DE CONTATOS -->
       <form>
         Filtrar por final do e-mail:
         <select
@@ -24,6 +25,7 @@
         </select>
       </form>
 
+      <!-- LISTA COM OS CARDS DE CONTATOS -->
       <div
         v-for="contact in contactList"
         :key="contact.id">

@@ -13,6 +13,10 @@
     height: 10rem;
   }
 
+  /*
+  * CARD ABERTO
+  * O card aumenta de altura e exibe as informaçõe secundárias.
+  */
   &--collapsed {
     width: 100%;
     height: 18rem;
@@ -168,6 +172,7 @@
     display: inline;
     max-width: 50%;
     margin: 1rem;
+    @include vendor-prefix('transition', 'height 600ms ease-out');
 
     @media only screen and (max-width: 578px) {
       display: none;
@@ -176,16 +181,16 @@
     &__iframe {
       float: left;
       height: 160px;
-      transition: height 800ms ease-out;
+      @include vendor-prefix('transition', 'height 600ms ease-out');
     }
 
     &--hidden {
       height: 0px;
-      transition: height 800ms ease-out;
+      @include vendor-prefix('transition', 'height 600ms ease-out');
 
       &__iframe {
         height: 0px;
-        transition: height 800ms ease-out;
+        @include vendor-prefix('transition', 'height 600ms ease-out');
       }
     }
   }

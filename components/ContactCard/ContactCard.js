@@ -21,6 +21,11 @@ const ContactCard = {
   },
 
   filters: {
+    /**
+    * Extrai a inicial do nome de um contato.
+    * @param {string} name - nome para ser retirada a inicial
+    * @return {string} retorna o character inicial da string enviada
+    */
     returnInitial(name) {
       return name.slice(0, 1);
     },

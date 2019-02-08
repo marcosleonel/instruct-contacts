@@ -1,5 +1,7 @@
 <template>
   <header class="header">
+
+    <!-- BARRA SUPERIOR -->
     <nav class="header__topbar">
       <img
         class="header__topbar__Logo"
@@ -7,6 +9,7 @@
         alt="Logo da Instruct">
     </nav>
 
+    <!-- SECÇÃO DO TÍTULO -->
     <section class="header__presentation">
       <div class="container">
         <h1 class="header__presentation__title">
