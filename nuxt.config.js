@@ -1,7 +1,7 @@
 const pkg = require('./package');
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
 
   /*
   ** Headers of the page
@@ -21,7 +21,16 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#ffffff' },
+
+  /*
+  ** Customize the spinner color
+  */
+  loadingIndicator: {
+    name: 'folding-cube',
+    color: '#ffffff',
+    background: '#0080B6',
+  },
 
   /*
   ** Global CSS
