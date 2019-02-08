@@ -1,21 +1,73 @@
 .header {
   width: 100%;
-  height: 320px;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  border-bottom: 0.2rem solid $white;
+  height: auto;
 
-  &__title {
-    color: $white;
-    font-size: 7rem;
-    font-weight: bolder;
+  /*
+  * TOPBAR
+  * Barra superior com o logo.
+  */
+  &__topbar {
+    @include flex-prefix('display', 'flex');
+    width: 100%;
+    height: 5rem;
+    padding-left: 3rem;
+
+    &__logo {
+      align-self: center;
+    }
+
+    @media only screen and (max-width: 578px) {
+      justify-content: center;
+      padding: 0;
+    }
   }
 
-  &__subtitle {
-    color: $white;
-    margin-top: 1rem;
+  /*
+  * APRESENTAÇÃO
+  * Secção com o título e subtítulo da página.
+  */
+  &__presentation {
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    background-color: $color-primary-dark;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/img/header-bg.jpg');
+
+    @media only screen and (max-width: 578px) {
+      @include flex-prefix('display', 'flex');
+      justify-content: center;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &__title {
+      color: $white;
+      font-size: 4rem;
+      font-weight: bolder;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+
+      @media only screen and (max-width: 578px) {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+
+    &__subtitle {
+      color: $white;
+      margin-top: 1rem;
+      padding-left: 0.5rem;
+
+      @media only screen and (max-width: 578px) {
+        display: block;
+        padding: 0;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
   }
 }

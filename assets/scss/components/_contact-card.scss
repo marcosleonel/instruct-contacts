@@ -1,0 +1,197 @@
+.contact-card {
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border-left: 0.5rem solid $color-warning;
+  background-color: $white;
+  box-shadow: $card-shadow;
+  @include vendor-prefix('transition', 'height 600ms ease-out');
+
+
+  @media only screen and (max-width: 578px) {
+    height: 10rem;
+  }
+
+  /*
+  * CARD ABERTO
+  * O card aumenta de altura e exibe as informaçõe secundárias.
+  */
+  &--collapsed {
+    width: 100%;
+    height: 18rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border-left: 0.5rem solid $color-warning;
+    background-color: $white;
+    box-shadow: $card-shadow;
+    @include vendor-prefix('transition', 'height 600ms ease-out');
+
+    @media only screen and (max-width: 578px) {
+      height: 22rem;
+    }
+  }
+
+  /*
+  * INCIAL DO NOME
+  * Exibe a letra inicial do nome civil.
+  */
+  &__initial {
+    float: left;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: $color-info;
+    text-align: center;
+    cursor: pointer;
+
+    &__char {
+      font-family: $font-primary;
+      font-size: 3rem;
+      color: $color-primary-dark;
+    }
+  }
+
+  /*
+  * NOMES
+  * Exibe o nome civil e o nome de usuário.
+  */
+  &__names {
+    float: left;
+    padding: 1rem;
+    text-align: left;
+    color: $gray;
+    cursor: pointer;
+
+    &__civil-name {
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      @media only screen and (max-width: 991px) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 25vw;
+      }
+
+      @media only screen and (max-width: 578px) {
+        font-size: 1.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 50vw;
+      }
+
+      @media only screen and (max-width: 360px) {
+        max-width: 40vw;
+      }
+    }
+
+    &__username {
+      font-weight: 0.8rem;
+    }
+  }
+
+  /*
+  * INFORMAÇÕES PRIMÁRIAS
+  * Elas são exibidas mesmo com o card fechado.
+  */
+  &__primary-info {
+    float: right;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    text-align: right;
+    color: $gray;
+
+    @media only screen and (max-width: 578px) {
+      display: block;
+      width: 100%;
+      margin-top: -1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__icon {
+      margin-right: 0.4rem;
+      color: $color-primary-dark;
+    }
+
+    &__phone {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    &__email {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  /*
+  * INFORMAÇÕES SECUNDÁRIAS
+  * Elas ficam escondidas e aparecem somente quando o card é aberto.
+  */
+  &__secondary-info {
+    float: right;
+    padding-right: 1rem;
+    text-align: right;
+    color: $gray;
+    transform: translateY(-1.4rem);
+
+    &__icon {
+      margin-right: 0.4rem;
+      color: $color-primary-dark;
+    }
+
+    &__block {
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+      small {
+        display: block;
+        font-style: italic;
+      }
+
+      .bs {
+        color: $color-primary-light;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  /*
+  * MAPA
+  * Ele fica escondido e aparece somente quando o card é aberto.
+  */
+  &__map {
+    display: inline;
+    max-width: 50%;
+    margin: 1rem;
+    @include vendor-prefix('transition', 'height 600ms ease-out');
+
+    @media only screen and (max-width: 578px) {
+      display: none;
+    }
+
+    &__iframe {
+      float: left;
+      height: 160px;
+      @include vendor-prefix('transition', 'height 600ms ease-out');
+    }
+
+    &--hidden {
+      height: 0px;
+      @include vendor-prefix('transition', 'height 600ms ease-out');
+
+      &__iframe {
+        height: 0px;
+        @include vendor-prefix('transition', 'height 600ms ease-out');
+      }
+    }
+  }
+}
