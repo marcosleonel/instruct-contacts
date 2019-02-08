@@ -4,9 +4,6 @@
   "description": "Organizador de contatos",
   "author": "Marcos Leonel",
   "private": true,
-  "engines": {
-    "node": "10.15.0"
-  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
